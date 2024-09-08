@@ -1,47 +1,98 @@
 import Image from "next/image";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button";
 import { ArrowTopRightIcon } from "@radix-ui/react-icons";
+import BlogContents from "./components/BlogContents";
 
 export default function Home() {
   return (
-    <div className="bg-black text-white border-white">
-  
- 
+    <div className="bg-[#141414] text-white border-white">
+      <div className="grid grid-cols-12 ">
+        <div className="col-span-7  ">
+          <p>Your Journey to Tomorrow Begins Here</p>
+          <p>Explore the Frontiers of Artificial Intelligence</p>
+          <p>
+            Welcome to the epicenter of AI innovation. FutureTech AI News is
+            your passport to a world where machines think, learn, and reshape
+            the future. Join us on this visionary expedition into the heart of
+            AI.
+          </p>
+          <div className="grid grid-cols-3  border-2">
+            <div className="flex flex-col justify-start items-start border p-3">
+              <span>300+</span>
+              <span>Resources available</span>
+            </div>
+            <div className="flex flex-col justify-start items-start border p-3">
+              <span>300+</span>
+              <span>Resources available</span>
+            </div>
+            <div className="flex flex-col justify-start items-start border p-3">
+              <span>300+</span>
+              <span>Resources available</span>
+            </div>
+          </div>
+        </div>
 
-  <div className="grid grid-cols-12 ">
-    <div className="col-span-7 bg-gray-900 p-4">
-      <p className="text-3xl "> Your Journey to Tomorrow Begins Here</p>
-      <p>Explore the Frontiers of Artificial Intelligence</p>
-      <p>Welcome to the epicenter of AI innovation. FutureTech 
-        AI News is your passport to a world where machines
-         think, learn, and reshape the future. Join us on 
-         this visionary expedition into the heart of AI.</p>
-      
-    </div>
-    <div className="col-span-5 bg-gray-800 p-4">
-    <div className="flex -space-x-3 *:ring *:ring-white">
-      <Avatar>
-        <AvatarImage src="/avatars/avatar-01.jpg" />
-      </Avatar>
-      <Avatar>
-        <AvatarImage src="/avatars/avatar-02.jpg" />
-      </Avatar>
-      <Avatar>
-        <AvatarImage src="/avatars/avatar-03.jpg" />
-      </Avatar>
-      <p>Explore 1000+ resources</p>
-      <p>Over 1,000 articles on emerging tech trends and breakthroughs</p>
-      <Button className="flex items-center justify-center gap-2 bg-primary text-primary-foreground px-4 py-2 rounded-md hover:bg-primary/80 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
-      Explore Resources
-      <ArrowTopRightIcon className="h-4 w-4" />
-      </Button>
-    </div>
-    </div>
+        <div className="col-span-5  relative">
+          <Image
+            src="/home/hero.svg"
+            alt="hero"
+            width={100}
+            height={100}
+            className="w-full "
+          />
+          <div className="absolute top-1/2 px-10">
+            <p>Avtar</p>
+            <p>Explore 1000+ resources</p>
+            <p>
+              Over 1,000 articles on emerging tech trends and breakthroughs.
+            </p>
+            <p>Explore Resources</p>
+          </div>
+        </div>
+      </div>
+      {/* second section */}
+      <div className="min-h-[40vh]">
+        <div className="grid grid-cols-3">
+          <div>
+            <p>image</p>
+            <div className="flex justify-between items-center">
+              <div>
+                <p>Latest News Updates</p>
+                <p>Stay Current</p>
+              </div>
+              <div>image</div>
+            </div>
+            <p>Over 1,000 articles published monthly</p>
+          </div>
+          <div>
+            <p>image</p>
+            <div className="flex justify-between items-center">
+              <div>
+                <p>Latest News Updates</p>
+                <p>Stay Current</p>
+              </div>
+              <div>image</div>
+            </div>
+            <p>Over 1,000 articles published monthly</p>
+          </div>
+          <div>
+            <p>image</p>
+            <div className="flex justify-between items-center">
+              <div>
+                <p>Latest News Updates</p>
+                <p>Stay Current</p>
+              </div>
+              <div>image</div>
+            </div>
+            <p>Over 1,000 articles published monthly</p>
+          </div>
+        </div>
+      </div>
 
-    
-  </div>
-</div>
-
+      <div>
+<BlogContents/>
+      </div>
+    </div>
   );
 }
